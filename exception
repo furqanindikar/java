@@ -1,0 +1,29 @@
+public class StringLengthException extends Exception {
+    public StringLengthException() {
+        super("String length should be less than 8 characters");
+    }
+
+    public StringLengthException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+    public static void checkStringLength(String s) throws StringLengthException {
+        if (s.length() >= 8) {
+            throw new StringLengthException();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter a string: ");
+            String input = scanner.nextLine();
+            checkStringLength(input);
+        } catch (StringLengthException e) {
+            System.out.println("String length error: " + e.getMessage());
+        }
+    }
+}
