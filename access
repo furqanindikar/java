@@ -1,0 +1,31 @@
+//8)Implementing the access control mechanism
+import java.io.*;
+import java.util.*;
+class MyClass {
+    public int publicVar;
+    protected int protectedVar;
+    private int privateVar;
+
+    public MyClass(int publicVar, int protectedVar, int privateVar) {
+        this.publicVar = publicVar;
+        this.protectedVar = protectedVar;
+        this.privateVar = privateVar;
+    }
+
+    public void printValues() {
+        System.out.println("Public variable: " + publicVar);
+        System.out.println("Protected variable: " + protectedVar);
+        System.out.println("Private variable: " + privateVar);
+    }
+}
+
+public class AccessControl {
+    public static void main(String[] args) {
+        MyClass myObj = new MyClass(1, 2, 3);
+        myObj.printValues();
+
+        System.out.println("Public variable value: " + myObj.publicVar);
+        //System.out.println("Protected variable value: " + myObj.protectedVar);
+        //System.out.println("Private variable value: " + myObj.privateVar); 
+    }
+}

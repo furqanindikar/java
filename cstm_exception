@@ -1,0 +1,22 @@
+//15)Write a program for custom exception for checking entered string must have less than 8 characters.
+import java.io.*;
+import java.util.*;
+class StringTooLongException extends Exception {
+    public StringTooLongException(String message) {
+        super(message);
+    }
+}
+
+public class CustomExceptionDemo {
+    public static void main(String[] args) {
+        String inputString = "Hello, world!";
+
+        try {
+            if (inputString.length() >= 8) {
+                throw new StringTooLongException("String has more than 8 characters");
+            }
+        } catch (StringTooLongException e) {
+            System.out.println("Caught exception: " + e.getMessage());
+        }
+    }
+}

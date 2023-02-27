@@ -1,0 +1,23 @@
+//16)Write a program in java if number is less than 10 and greater than 50 it generates the exception out of range. Else it displays the square of number.
+import java.io.*;
+import java.util.*;
+class OutOfRangeException extends Exception {
+    public OutOfRangeException(String message) {
+        super(message);
+    }
+}
+
+public class ExceptionDemo {
+    public static void main(String[] args) {
+        int number = 7;
+        try {
+            if (number < 10 || number > 50) {
+                throw new OutOfRangeException("Number is out of range.");
+            } else {
+                System.out.println("The square of the number is " + (number * number));
+            }
+        } catch (OutOfRangeException e) {
+            System.out.println("Caught exception: " + e.getMessage());
+        }
+    }
+}

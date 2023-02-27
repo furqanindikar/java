@@ -1,0 +1,19 @@
+Write a Java Program to finds the average of numbers in an array.
+     import java.io.*;
+     public class AverageArray {
+         public static void main(String[] args) {
+             double[] numbers = {10.5, 20.0, 30.5, 40.0, 50.5};
+             double sum = 0;
+             double average;
+     
+             for(int i=0; i<numbers.length; i++) {
+                 sum += numbers[i];
+             }
+     
+             average = sum / numbers.length;
+     
+             System.out.println("The average of numbers in the array is: " + average);
+         }
+     }
+
+

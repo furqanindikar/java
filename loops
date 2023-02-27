@@ -1,0 +1,77 @@
+//3)Implement all control and looping statements
+import java.io.*;
+import java.util.*;
+public class ControlAndLoopingStatements {
+    public static void main(String[] args) {
+        // if-else statement
+        int num = 10;
+        if(num % 2 == 0) {
+            System.out.println(num + " is even");
+        } else {
+            System.out.println(num + " is odd");
+        }
+
+        // switch statement
+        char grade = 'B';
+        switch(grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+            case 'C':
+                System.out.println("Well done");
+                break;
+            case 'D':
+                System.out.println("You passed");
+                break;
+            case 'F':
+                System.out.println("Better try again");
+                break;
+            default:
+                System.out.println("Invalid grade");
+        }
+
+        // while loop
+        int i = 1;
+        while(i <= 10) {
+            System.out.println(i);
+            i++;
+        }
+
+        // do-while loop
+        int j = 1;
+        do {
+            System.out.println(j);
+            j++;
+        } while(j <= 10);
+
+        // for loop
+        for(int k=1; k<=10; k++) {
+            System.out.println(k);
+        }
+
+        // break statement
+        for(int l=1; l<=10; l++) {
+            if(l == 5) {
+                break;
+            }
+            System.out.println(l);
+        }
+
+        // continue statement
+        for(int m=1; m<=10; m++) {
+            if(m == 5) {
+                continue;
+            }
+            System.out.println(m);
+        }
+
+        // nested loop
+        for(int n=1; n<=3; n++) {
+            for(int o=1; o<=3; o++) {
+                System.out.println(n + " " + o);
+            }
+        }
+    }
+}
+

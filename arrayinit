@@ -1,0 +1,37 @@
+//4)Demonstrate different ways arrays initialization
+import java.io.*;
+import java.util.*;
+class ArrayWays {
+ public static void main(String[] args) {
+  
+   // create an array
+   int[] age = {12, 4, 5, 2, 5};
+
+   // access each array elements
+   System.out.println("Accessing Elements of Array:");
+   System.out.println("First Element: " + age[0]);
+   System.out.println("Second Element: " + age[1]);
+   System.out.println("Third Element: " + age[2]);
+   System.out.println("Fourth Element: " + age[3]);
+   System.out.println("Fifth Element: " + age[4]);
+
+  int[] age1 = new int[3];
+  age1[0]=12;
+  age1[1]=13;
+  age1[2]=14;
+   // loop through the array
+   // using for loop
+   System.out.println("Using for Loop:");
+   for(int i = 0; i < age1.length; i++) 
+     System.out.println(age1[i]);
+
+ int[] age2;
+ age2 = new int[3];
+ age2[0]=12;
+ age2[1]=13;
+ age2[2]=14;
+ for(int i = 0; i < age2.length; i++) 
+     System.out.println(age2[i]);
+ }
+}
+

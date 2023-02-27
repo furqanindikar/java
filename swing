@@ -1,0 +1,88 @@
+//25)Demonstrate use of Button, DropDownList, Labels, TextBoxes, RadioButtons etc.
+
+//26)Implement a complete GUI using Swing
+       //Implement a complete GUI using Swing
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class ExampleGUI extends JFrame implements ActionListener {
+    // GUI components
+    private JLabel nameLabel, ageLabel, genderLabel;
+    private JTextField nameText, ageText;
+    private JRadioButton maleRadio, femaleRadio;
+    private JButton submitButton;
+
+    public ExampleGUI() {
+        // Set the window title and size
+        setTitle("Example GUI");
+        setSize(300, 200);
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        // Create a panel to hold the GUI components
+        JPanel panel = new JPanel();
+        panel.setLayout(null);
+
+        // Add the components to the panel
+        nameLabel = new JLabel("Name:");
+        nameLabel.setBounds(50, 30, 80, 25);
+        panel.add(nameLabel);
+
+        nameText = new JTextField(20);
+        nameText.setBounds(130, 30, 120, 25);
+        panel.add(nameText);
+
+        ageLabel = new JLabel("Age:");
+        ageLabel.setBounds(50, 70, 80, 25);
+        panel.add(ageLabel);
+
+        ageText = new JTextField(20);
+        ageText.setBounds(130, 70, 120, 25);
+        panel.add(ageText);
+
+        genderLabel = new JLabel("Gender:");
+        genderLabel.setBounds(50, 110, 80, 25);
+        panel.add(genderLabel);
+
+        maleRadio = new JRadioButton("Male");
+        maleRadio.setBounds(130, 110, 60, 25);
+        panel.add(maleRadio);
+
+        femaleRadio = new JRadioButton("Female");
+        femaleRadio.setBounds(190, 110, 80, 25);
+        panel.add(femaleRadio);
+
+        // Create a button group to group the radio buttons
+        ButtonGroup genderGroup = new ButtonGroup();
+        genderGroup.add(maleRadio);
+        genderGroup.add(femaleRadio);
+
+        submitButton = new JButton("Submit");
+        submitButton.setBounds(100, 150, 80, 25);
+        submitButton.addActionListener(this);
+        panel.add(submitButton);
+
+        // Add the panel to the window
+        getContentPane().add(panel);
+
+        // Center the window on the screen
+        setLocationRelativeTo(null);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        // Display a message with the user's entered information
+        String gender = maleRadio.isSelected() ? "Male" : "Female";
+        JOptionPane.showMessageDialog(this,
+            "Name: " + nameText.getText() + "\n" +
+            "Age: " + ageText.getText() + "\n" +
+            "Gender: " + gender);
+    }
+
+    public static void main(String[] args) {
+        // Create a new ExampleGUI object and display it
+        ExampleGUI exampleGUI = new ExampleGUI();
+        exampleGUI.setVisible(true);
+    }
+}

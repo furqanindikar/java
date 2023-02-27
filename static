@@ -1,0 +1,24 @@
+//13)Java Program to demonstrate the use of static variable  
+import java.io.*;
+import java.util.*;
+class MyClass {
+    static int count = 0;
+
+    public MyClass() {
+        count++;
+    }
+
+    public static void printCount() {
+        System.out.println("Count: " + count);
+    }
+}
+
+public class StaticVariableDemo {
+    public static void main(String[] args) {
+        MyClass obj1 = new MyClass();
+        MyClass obj2 = new MyClass();
+        MyClass obj3 = new MyClass();
+
+        MyClass.printCount(); // prints "Count: 3"
+    }
+}

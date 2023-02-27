@@ -1,0 +1,13 @@
+import java.io.File;
+
+public class delete {
+    public static void main(String[] args) {
+        File obj = new File("gfg.txt");
+        if(obj.delete()) {
+            System.out.println("The deleted file name is + " + obj.getName());
+        }
+        else {
+            System.out.println("An error occured");
+        }
+    }
+}

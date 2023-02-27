@@ -1,0 +1,33 @@
+//9)Consider a scenario where Bank is a class that provides a method to get the rate of interest. However, the rate of interest may differ according to banks. For example, SBI, ICICI, and AXIS banks are providing 8.4%, 7.3%, and 9.7% rate of interest.
+import java.io.*;
+import java.util.*;
+class Bank{
+	float i = 7.5f;
+	void getRateOfInterest() {
+		System.out.println();}
+}
+class SBI extends Bank{
+	float Si = 7.0f;
+	void getRateOfInterest() {System.out.println("SBI Interest = " + Si+"%"); }
+}
+class ICICI extends Bank{
+	    float Ii = 7.5f;
+		void getRateOfInterest() {System.out.println("ICICI Interest = " + Ii+"%"); }
+		}
+		
+class AXIS extends Bank{
+	float Ai = 7.75f;
+	void getRateOfInterest() {System.out.println("AXIS Interest = " + Ai+"%"); }
+}
+public class BankInterest {
+
+public static void main(String[] args) {
+		SBI S1 = new SBI();
+		ICICI I1 = new ICICI();
+		AXIS A1 = new AXIS();
+		S1.getRateOfInterest();
+		I1.getRateOfInterest();
+		A1.getRateOfInterest();
+		
+	}
+} 
